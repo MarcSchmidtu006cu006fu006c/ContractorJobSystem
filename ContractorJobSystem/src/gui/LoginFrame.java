@@ -17,8 +17,8 @@ import java.awt.event.ActionEvent;
 public class LoginFrame extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField usernameTextField;
+	private JTextField passwordTextField;
 
 	/**
 	 * Launch the application.
@@ -48,49 +48,53 @@ public class LoginFrame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Please Login");
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 32));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(6, 6, 890, 38);
-		contentPane.add(lblNewLabel);
+		JLabel loginLabel = new JLabel("Please Login");
+		loginLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 32));
+		loginLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		loginLabel.setBounds(6, 6, 890, 38);
+		contentPane.add(loginLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("If you do not have an account please click \"Request Access\"");
-		lblNewLabel_1.setBounds(268, 56, 382, 16);
-		contentPane.add(lblNewLabel_1);
+		JLabel requestLabel = new JLabel("If you do not have an account please click \"Request Access\"");
+		requestLabel.setBounds(268, 56, 382, 16);
+		contentPane.add(requestLabel);
 		
-		JLabel lblNewLabel_2 = new JLabel("Username: ");
-		lblNewLabel_2.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
-		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setBounds(245, 146, 94, 23);
-		contentPane.add(lblNewLabel_2);
+		JLabel usernameLabel = new JLabel("Username: ");
+		usernameLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
+		usernameLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		usernameLabel.setBounds(245, 146, 94, 23);
+		contentPane.add(usernameLabel);
 		
-		textField = new JTextField();
-		lblNewLabel_2.setLabelFor(textField);
-		textField.setBounds(332, 144, 244, 26);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		usernameTextField = new JTextField();
+		usernameLabel.setLabelFor(usernameTextField);
+		usernameTextField.setBounds(332, 144, 244, 26);
+		contentPane.add(usernameTextField);
+		usernameTextField.setColumns(10);
 		
-		JLabel lblNewLabel_2_1 = new JLabel("Password: ");
-		lblNewLabel_2_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2_1.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
-		lblNewLabel_2_1.setBounds(245, 181, 94, 23);
-		contentPane.add(lblNewLabel_2_1);
+		JLabel passwordLabel = new JLabel("Password: ");
+		passwordLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		passwordLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
+		passwordLabel.setBounds(245, 181, 94, 23);
+		contentPane.add(passwordLabel);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(332, 181, 244, 26);
-		contentPane.add(textField_1);
+		passwordTextField = new JTextField();
+		passwordLabel.setLabelFor(passwordTextField);
+		passwordTextField.setColumns(10);
+		passwordTextField.setBounds(332, 181, 244, 26);
+		contentPane.add(passwordTextField);
 		
-		JButton btnNewButton = new JButton("Login");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton loginButton = new JButton("Login");
+		loginButton.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
+				
+				
 			}
 		});
-		btnNewButton.setBounds(385, 219, 117, 29);
-		contentPane.add(btnNewButton);
+		loginButton.setBounds(385, 219, 117, 29);
+		contentPane.add(loginButton);
 		
-		JButton btnNewButton_1 = new JButton("Request Access");
-		btnNewButton_1.setBounds(377, 288, 147, 23);
-		contentPane.add(btnNewButton_1);
+		JButton requestAccessButton = new JButton("Request Access");
+		requestAccessButton.setBounds(377, 288, 147, 23);
+		contentPane.add(requestAccessButton);
 	}
 }
